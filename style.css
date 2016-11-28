@@ -1,0 +1,29 @@
+#mainContainer{
+    width: 50%;
+    margin: 2% auto;
+    font-size: 150%;
+}
+#description{
+    margin: 0px;
+    width: 70%;
+    padding: 1%;
+}
+#button{
+    margin: 0px;
+    width: 20%;
+    padding: 1%;
+    
+}
+#listItem{
+    margin: 2px;
+    width: 100%;
+    background-color: blueviolet;
+    padding: 1%;
+}
+#delete{
+    
+    float: right;
+    width: 10%;
+    padding: 1%;
+    background-color: white;
+}
