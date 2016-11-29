@@ -1,18 +1,28 @@
    var item = [];
-
+var data = "";
 function toDo() {
        var value = document.getElementById('description').value;
        var list  = document.getElementById("list");
        list.innerHTML =  " ";
-     
-       item.push(value);
-
-       for (var i = 1; i < item.length ; i++) {
+     if(value == "" ){
+         alert("Please Enter Something in Field");
+     }else{
+       item.push(value);  
+     }
+        diplay();
+        data = " ";    
+       document.getElementById('description').value = "";
+  }
+  function diplay() {
+       for (var i = 0; i < item.length ; i++) {
           
-          list.innerHTML += "<p id='listItem'>" + i + " " +  item[i] + "<button value='i' id='delete'>X</button></p>";
-     
+          data += "<p id='listItem'>" + (i) + " - " +  item[i] + "<button id='delete' onclick='remove(" + i + ");'>X</button></p>";
+          list.innerHTML = data;
         }
-        
-       
-} 
-        
+       data = " "; 
+  } 
+function remove(remov) {
+    var id  = document.getElementById('delete');
+    item.splice(remov,1);
+    diplay();
+}        
